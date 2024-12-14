@@ -1,0 +1,100 @@
+.services {
+  h2 {
+    text-align: center;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .slider {
+      width: 90rem;
+      height: 55rem;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 4px 0px 9px 0px rgba(34, 60, 80, 0.2);
+      transition: transform 0.2s;
+      background: white;
+      &:hover {
+        transform: scale(1.03);
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        width: 90rem;
+        height: 55rem;
+        flex-shrink: 0;
+        border-radius: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        padding: 4rem;
+        gap: 2rem;
+
+        img {
+          height: 100%;
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+
+          h4 {
+            font-size: 2.4rem;
+            font-weight: 600;
+          }
+          p {
+            font-size: 1.8rem;
+            font-weight: 500;
+          }
+
+          ul {
+            list-style-type: none;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 34px;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .prev,
+    .next {
+      border: none;
+      width: 60px;
+      height: 60px;
+      font-size: 6rem;
+      cursor: pointer;
+      color: var(--green-color);
+      transition: transform 0.3s ease-in;
+    }
+
+    .next {
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+
+    .prev {
+      &:hover {
+        transform: translateX(-10px);
+      }
+    }
+  }
+}

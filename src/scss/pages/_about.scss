@@ -1,0 +1,57 @@
+.about {
+  min-height: 71rem;
+  background: rgba($color: #6cb300, $alpha: 0.3);
+
+  &__wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 130rem;
+    gap: 7rem;
+    padding: 7rem 0;
+  }
+
+  &__img {
+    img {
+      display: block;
+      border-radius: 90px;
+      width: 47rem;
+      height: 60rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 5.4rem;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 34px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      li {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

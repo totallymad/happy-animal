@@ -1,0 +1,59 @@
+@use "base/base.scss";
+
+.hero {
+  padding-top: 150px;
+  min-height: 70rem;
+  // margin: 3rem;
+  margin-bottom: 8rem;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 130rem;
+  }
+
+  &__text {
+    padding-top: 11rem;
+    padding-left: 3rem;
+    position: relative;
+    width: 700px;
+    h2 {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+
+      span {
+        font-weight: 600;
+        color: #0077d5;
+      }
+    }
+
+    button {
+      margin-top: 4rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--green-color);
+      margin-bottom: 1.2rem;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      left: -50px;
+    }
+  }
+  &__img {
+    position: relative;
+    width: 400px;
+    img {
+      position: absolute;
+      z-index: -1;
+      left: -200px;
+    }
+  }
+}

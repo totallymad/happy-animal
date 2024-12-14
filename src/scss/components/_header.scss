@@ -1,0 +1,88 @@
+@use "base/base.scss";
+
+.header {
+  height: 11rem;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  background: white;
+  width: 100%;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7rem;
+    width: 130rem;
+
+    nav {
+      display: flex;
+      align-items: center;
+      ul {
+        list-style-type: none;
+        display: flex;
+        gap: 2rem;
+        font-weight: 600;
+        font-size: 2rem;
+        li {
+          position: relative;
+          z-index: 10;
+          transition: transform 0.1s ease-in;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+          &.active {
+            &::before {
+              z-index: -1;
+              content: "";
+              position: absolute;
+              height: 50px;
+              width: 50px;
+              border-radius: 100%;
+              top: -50%;
+              left: -15px;
+              background-color: #6cb300;
+            }
+
+            // &-account {
+            //   &::before {
+            //     z-index: -1;
+            //     content: "";
+            //     position: absolute;
+            //     height: 50px;
+            //     width: 50px;
+            //     border-radius: 100%;
+            //     top: -50%;
+            //     left: -20%;
+            //     background-color: #6cb300;
+            //   }
+          }
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            z-index: 10;
+          }
+        }
+      }
+    }
+  }
+  &__logo {
+    img {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 100%;
+    }
+  }
+}
+
+.hidden-header {
+  opacity: 0; /* Прячем элемент */
+}
