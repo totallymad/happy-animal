@@ -3,32 +3,34 @@ const slide = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-let currentIndex = 0;
-const totalSlides = slide.length;
+if (slides) {
+    let currentIndex = 0;
+    const totalSlides = slide.length;
 
-function updateSlidePos() {
-    const offset = -currentIndex * 900;
-    slides.style.transform = `translateX(${offset}px)`;
-}
-
-function showPrev() {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
+    function updateSlidePos() {
+        const offset = -currentIndex * 900;
+        slides.style.transform = `translateX(${offset}px)`;
     }
-    updateSlidePos();
-}
 
-function showNext() {
-    currentIndex++;
-    if (currentIndex > totalSlides - 1) {
-        currentIndex = 0;
+    function showPrev() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        }
+        updateSlidePos();
     }
-    updateSlidePos();
-}
 
-prevBtn.addEventListener('click', showPrev);
-nextBtn.addEventListener('click', showNext);
+    function showNext() {
+        currentIndex++;
+        if (currentIndex > totalSlides - 1) {
+            currentIndex = 0;
+        }
+        updateSlidePos();
+    }
+
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+}
 
 let lastScrollTop = 0;
 const header = document.querySelector('.header');

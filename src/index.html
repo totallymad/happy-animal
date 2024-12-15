@@ -22,7 +22,7 @@
       sizes="16x16"
       href="favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="favicon/site.webmanifest" />
+    <!-- <link rel="manifest" href="favicon/site.webmanifest" /> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
@@ -107,7 +107,7 @@
       </section>
 
       <section class="services">
-        <h2>Какие услуги мы предлагаем?</h2>
+        <h2 class="subtitle">Какие услуги мы предлагаем?</h2>
         <div class="services__wrapper">
           <i class="fa-solid fa-caret-left prev"></i>
           <div class="slider">
@@ -174,21 +174,22 @@
           </div>
           <i class="fa-solid fa-caret-right next"></i>
         </div>
+        <h5>Мы всегда вам рады!</h5>
       </section>
 
       <section class="team">
+        <h2 class="subtitle">Встречайте нашу команду</h2>
+        <img
+          class="team__cat-img-1"
+          src="img/pink-cat.png"
+          alt="нарисованная розовая кошка"
+        />
+        <img
+          class="team__cat-img-2"
+          src="img/hero-img-2.png"
+          alt="нарисованная кошка"
+        />
         <div class="team__wrapper">
-          <h2>Встречайте нашу команду</h2>
-          <img
-            class="team__cat-img"
-            src="img/pink-cat.png"
-            alt="нарисованная розовая кошка"
-          />
-          <img
-            class="team__cat-img"
-            src="img/hero-img-2.png"
-            alt="нарисованная кошка"
-          />
           <div class="team__img"><img src="img/doctor.png" alt="доктор" /></div>
           <div class="team__text">
             <h3>Гильмутдинов Геннадий Сергеевич</h3>
@@ -209,10 +210,10 @@
 
       <section class="contacts">
         <div class="contacts__wrapper">
-          <h3>Контакты</h3>
           <div class="contacts__text">
+            <h3>Контакты</h3>
             <div class="contacts__adress">
-              <h4>Хэппи Энимал на Благовещенской</h4>
+              <h4>Хэппи Энимал на Молодежной</h4>
               <ul>
                 <li>
                   <i class="fa-solid fa-location-dot"></i>
@@ -224,8 +225,10 @@
                 </li>
                 <li>
                   <i class="fa-solid fa-clock"></i>
-                  <span>10:00 - 20:00 ПН - ПТ</span>
-                  <span>10:00 - 18:00 СБ - ВС</span>
+                  <div class="contacts__adress_time">
+                    <span>10:00 - 20:00 ПН - ПТ</span>
+                    <span>10:00 - 18:00 СБ - ВС</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -234,7 +237,7 @@
               <ul>
                 <li>
                   <i class="fa-solid fa-location-dot"></i>
-                  <span>Молодёжная ул., 15А, Вологда</span>
+                  <span>Благовещенская д. 71, Вологда</span>
                 </li>
                 <li>
                   <i class="fa-solid fa-phone"></i>
@@ -242,8 +245,10 @@
                 </li>
                 <li>
                   <i class="fa-solid fa-clock"></i>
-                  <span>10:00 - 20:00 ПН - ПТ</span>
-                  <span>10:00 - 18:00 СБ - ВС</span>
+                  <div class="contacts__adress_time">
+                    <span>10:00 - 20:00 ПН - ПТ</span>
+                    <span>10:00 - 18:00 СБ - ВС</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -260,34 +265,42 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="footer__logo"><img src="img/logo.png" alt="лого" /></div>
+        <div class="footer__logo">
+          <img src="img/logo.png" alt="лого" />
+          <span
+            >Ветеринарная клиника<br />
+            Хэппи Энимал</span
+          >
+        </div>
         <nav>
           <ul>
-            <li>гЛАВНАЯ</li>
-            <li>УСЛУГИ</li>
-            <li>ЛИЧНЫЙ КАБИНЕТ</li>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="catalog.html">УСЛУГИ</a></li>
+            <li><a href="account.html">ЛИЧНЫЙ КАБИНЕТ</a></li>
           </ul>
         </nav>
         <div class="footer__contacts">
           <ul>
             <li>
               <i class="fa-solid fa-phone"></i>
-              <span>89535055212</span>
+              <a href="tel:+79535055212">89535055212</a>
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <span>79535055212@ya.ru</span>
+              <a href="mailto:79535055212@ya.ru">79535055212@ya.ru</a>
             </li>
             <li>
               <i class="fa-brands fa-vk"></i>
-              <span>Вконтакте</span>
+              <a href="https://vk.com/happy__animal">Вконтакте</a>
             </li>
           </ul>
         </div>
       </div>
       <hr />
-      <div>Copyright © 2024. Все права защищены</div>
-      <a href="#"><img src="img/arrow-up.png" alt="стрелка вверх" /></a>
+      <div class="footer__copy">
+        <p>Copyright © 2024. Все права защищены</p>
+      </div>
+      <a class="arrow-up" href="#"><img src="img/arrow-up.png" alt="стрелка вверх" /></a>
     </footer>
   </body>
 </html>

@@ -1,0 +1,21 @@
+.catalog {
+  padding-top: 110px;
+
+  &__wrapper {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 390px);
+    gap: 20px;
+    justify-content: center;
+
+    img {
+      transition: all 0.3s ease-in;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.03);
+        filter: brightness(0.5);
+      }
+    }
+  }
+}

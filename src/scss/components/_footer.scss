@@ -1,0 +1,95 @@
+.footer {
+  background: rgba($color: #0077d5, $alpha: 0.3);
+  min-height: 27rem;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 3rem 0 7.5rem 0;
+  }
+
+  &__logo {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    span {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    img {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 100%;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
+
+      a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__contacts {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
+
+      li {
+        font-size: 2rem;
+        font-weight: 600;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  hr {
+    max-width: 130rem;
+    margin: 0 auto;
+    background: #000;
+    height: 2px;
+    border: none;
+  }
+
+  &__copy {
+    max-width: 130rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    p {
+      text-align: center;
+    }
+  }
+
+  .arrow-up {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    img {
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1) translateY(-10px);
+      }
+    }
+  }
+}
