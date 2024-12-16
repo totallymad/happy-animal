@@ -1,0 +1,59 @@
+.shop {
+  &__wrapper {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 381px);
+    gap: 55px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  &__card {
+    width: 381px;
+    height: 572px;
+    border-radius: 40px;
+    box-shadow: 0 4px 19px 0 rgba($color: #000000, $alpha: 0.25);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05) translateY(-15px);
+    }
+
+    &_text {
+      font-size: 1.8rem;
+      text-align: center;
+      line-height: 34px;
+      flex: 1;
+      margin-top: 22px;
+    }
+
+    &_button {
+      background: var(--green-color);
+      border: none;
+      width: 235px;
+      height: 45px;
+      border-radius: 80px;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      a {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}

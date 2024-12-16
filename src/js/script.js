@@ -1,3 +1,5 @@
+//  Слайдер
+
 const slides = document.querySelector('.slides');
 const slide = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev');
@@ -32,6 +34,8 @@ if (slides) {
     nextBtn.addEventListener('click', showNext);
 }
 
+// Скрытие навигации при прокуртке
+
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
@@ -48,3 +52,22 @@ window.addEventListener('scroll', function () {
 
     lastScrollTop = scrollTop;
 });
+
+
+// табы
+
+const tabs = document.querySelectorAll('.account__tab');
+const contents = document.querySelectorAll('.account__content');
+
+
+if (tabs) {
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('account__tab-active'));
+            tab.classList.add('account__tab-active');
+
+            contents.forEach(c => c.classList.remove('account__content-active'));
+            contents[index].classList.add('account__content-active');
+        })
+    })
+}

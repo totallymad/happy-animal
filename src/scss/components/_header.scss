@@ -18,7 +18,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 0 7rem;
+    // padding: 0 7rem;
     width: 130rem;
 
     nav {
@@ -27,7 +27,7 @@
       ul {
         list-style-type: none;
         display: flex;
-        gap: 2rem;
+        gap: 5rem;
         font-weight: 600;
         font-size: 2rem;
         li {
@@ -75,6 +75,7 @@
     }
   }
   &__logo {
+    width: 23rem;
     img {
       width: 11rem;
       height: 11rem;

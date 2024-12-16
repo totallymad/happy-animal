@@ -24,6 +24,10 @@ const paths = {
     src: "src/*.html",
     dest: "docs" // Папка для HTML
   },
+  htmlpages: {
+    src: "src/pages/**/*.html",
+    dest: "docs/pages" // Папка для HTML
+  },
   images: {
     src: "src/img/**/*",
     dest: "docs/img" // Папка для изображений
@@ -62,6 +66,13 @@ gulp.task('html', function () {
     .pipe(gulp.dest(paths.html.dest))
     .pipe(browserSync.stream());
 });
+// Задача: HTML - pages
+gulp.task('htmlpages', function () {
+  return gulp.src(paths.htmlpages.src)
+    .pipe(htmlmin({ collapseWhitespace: true })) // Минификация HTML
+    .pipe(gulp.dest(paths.htmlpages.dest))
+    .pipe(browserSync.stream());
+});
 
 // Задача: изображения
 gulp.task('images', function () {
@@ -96,7 +107,7 @@ gulp.task('serve', function () {
 
 // Задача: билд
 gulp.task('build', gulp.series(
-  gulp.parallel('styles', 'scripts', 'html', 'images', 'icons')
+  gulp.parallel('styles', 'scripts', 'html', 'htmlpages', 'images', 'icons')
 ));
 
 // Задача по умолчанию
