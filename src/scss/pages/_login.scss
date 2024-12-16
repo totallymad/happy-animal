@@ -1,0 +1,50 @@
+.login {
+  min-height: 100vh;
+  padding-top: 13rem;
+  padding-bottom: 2rem;
+
+  .fa-arrow-left {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    background: #eee;
+    border-radius: 100%;
+    padding: 1rem;
+  }
+
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+    min-height: 30rem;
+    margin: 0 auto;
+    background: white;
+    border-radius: 80px;
+    border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    padding: 3rem;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+
+    a {
+      color: #000;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        font-size: 2rem;
+      }
+
+      input {
+        font-size: 2rem;
+        padding: 0.7rem;
+        border-radius: 15px;
+      }
+    }
+  }
+}
